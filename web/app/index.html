@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Renting Room</title>
+  <link href='app.css' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="../node_modules/web3/dist/web3.min.js"></script>
+</head>
+<body class="background">
+  <h1>Renting</h1>
+  <br>
+  <h2>Set User</h2>
+  <br>
+  <label for="UserAddress">User Address:</label><input type="text" id="UserAddress" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input> <button id="setUser" onclick="setUserAddress()">Set Address</button><br>
+  <label for="balance">Balance:</label><span type="text" id="balance" ></span> <button id="getBalance" onclick="getBalance()">Get Balance</button><br>
+  <br>
+  <h2>Add a Renting Room </h2>
+  <br><label for="location">Location:</label><input type="text" id="location" placeholder="e.g., 广东省广州市中山大学东校区第四食堂"></input>
+  <br><label for="price">Price:</label><input type="text" id="price" placeholder="e.g., 1"></input>
+  <br><br><button id="Add" onclick="addRoom()">Add</button>
+  <br>
+
+  <br>
+  <h2>Get Room Fnformation </h2>
+  <br><label for="providerGet">Owner Address:</label><input type="text" id="providerGet" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><label for="RoomNumGet">Room Number:</label><input type="text" id="RoomNumGet" placeholder="e.g., 1"></input>
+  <br><label for="RoomNumGet">Room Location:</label><span id = "RoomLocation"> </span> 
+  <br><label for="RoomNumGet">Room isBooked:</label><span id = "isBooked"> </span> 
+  <br><label for="RoomNumGet">Room Price:</label><span id = "RoomPrice"> </span> 
+  <br><br><button id="get" onclick="getRoomInformation()">Get</button>
+  
+  <br>
+  <h2>Book or Cancel a Renting Room </h2>
+  <br><label for="providerBook">Owner Address:</label><input type="text" id="providerBook" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><label for="RoomNum">Room Number:</label><input type="text" id="RoomNumBook" placeholder="e.g., 1"></input>
+  <br><br><button id="book" onclick="bookRoom()">Book</button> <button id="cancel" onclick="cancel()">Cancel</button>
+  <br><br>
+
+  <h2>Send money to </h2>
+  <br><label for="address">To Address:</label><input type="text" id="address" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><label for="money">monery :</label><input type="text" id="money" placeholder="e.g., 1"></input>
+  <br><br><button id="book" onclick="send()">Send</button>
+  <br><br>
+
+  <script  src="./node_modules/ jquery-3.2.1/jquery-3.2.1.slim.min.js"></script>
+  
+  <script  src=”app.js”>
+  </script>
+
+</html>
